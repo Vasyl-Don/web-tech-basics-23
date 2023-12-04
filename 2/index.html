@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Form</title>
+    <script src="data.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <form action='index.html' method="post" onsubmit="return Formdata(this)">
+        <h2>Contact Form</h2>
+
+        <label for="fnm">Your Name:</label>
+        <input type="text" name="fnm" id="fnm" value="">
+
+        <label for="text">Message:</label>
+        <textarea name="text" id="text"></textarea>
+
+        <label for="email">E-Mail:</label>
+        <input type="text" name="email" id="email" value="">
+
+        <label for="phone">Telephone Number:</label>
+        <input type="text" name="phone" id="phone" value="">
+
+        <label for="summa">Summa 10+10:</label>
+        <input type="text" name="summa" id="summa" value="">
+
+        <input type="hidden" name="hidden" value="ok">
+        <input type="submit" value="Submit" name="Submit">
+    </form>
+</body>
+</html>
