@@ -4,32 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Form</title>
+    <title>Валідація форми</title>
     <script src="data.js" defer></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
     <form action='index.html' method="post" onsubmit="return validateForm(this)">
-        <h2>Contact Form</h2>
+        <h2>Форма</h2>
 
-        <label for="pib">Full Name:</label>
+        <label for="pib">ПІБ:</label>
         <input type="text" name="pib" id="pib" placeholder="Петренко П.Т.">
 
-        <label for="group">Group:</label>
+        <label for="group">Група:</label>
         <input type="text" name="group" id="group" placeholder="АБ-00">
 
-        <label for="idCard">ID-card:</label>
+        <label for="idCard">ID-картка:</label>
         <input type="text" name="idCard" id="idCard" placeholder="АБ 123456">
 
-        <label for="dob">Date of Birth:</label>
+        <label for="dob">Дата народження:</label>
         <input type="text" name="dob" id="dob" placeholder="01.02.2010">
 
         <label for="email">E-Mail:</label>
         <input type="text" name="email" id="email" placeholder="mymail@mail.com">
 
         <input type="hidden" name="hidden" placeholder="ok">
-        <input type="submit" value="Submit" name="Submit">
+        <input type="submit" value="Надіслати" name="Submit">
     </form>
 </body>
 
