@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +8,29 @@
     <script src="data.js" defer></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
-    <form action='index.html' method="post" onsubmit="return Formdata(this)">
+    <form action='index.html' method="post" onsubmit="return validateForm(this)">
         <h2>Contact Form</h2>
 
-        <label for="fnm">Your Name:</label>
-        <input type="text" name="fnm" id="fnm" value="">
+        <label for="pib">Full Name:</label>
+        <input type="text" name="pib" id="pib" placeholder="Петренко П.Т.">
 
-        <label for="text">Message:</label>
-        <textarea name="text" id="text"></textarea>
+        <label for="group">Group:</label>
+        <input type="text" name="group" id="group" placeholder="АБ-00">
+
+        <label for="idCard">ID-card:</label>
+        <input type="text" name="idCard" id="idCard" placeholder="АБ 123456">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="text" name="dob" id="dob" placeholder="01.02.2010">
 
         <label for="email">E-Mail:</label>
-        <input type="text" name="email" id="email" value="">
+        <input type="text" name="email" id="email" placeholder="mymail@mail.com">
 
-        <label for="phone">Telephone Number:</label>
-        <input type="text" name="phone" id="phone" value="">
-
-        <label for="summa">Summa 10+10:</label>
-        <input type="text" name="summa" id="summa" value="">
-
-        <input type="hidden" name="hidden" value="ok">
+        <input type="hidden" name="hidden" placeholder="ok">
         <input type="submit" value="Submit" name="Submit">
     </form>
 </body>
+
 </html>
