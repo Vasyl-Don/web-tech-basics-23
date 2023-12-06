@@ -20,7 +20,7 @@ td {
 
 .palette {
     display: none;
-    position: absolute;
+    position: relative;
 }
 
 .color-box {

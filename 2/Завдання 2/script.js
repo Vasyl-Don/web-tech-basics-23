@@ -3,12 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const body = document.querySelector("body");
     body.appendChild(table);
 
-    // Генерація таблиці 6 на 6
     for (let i = 0; i < 6; i++) {
         const row = table.insertRow();
         for (let j = 0; j < 6; j++) {
             const cell = row.insertCell();
-            cell.textContent = i * 6 + j + 1; // Номер клітинки
+            cell.textContent = i * 6 + j + 1;
         }
     }
 
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let selectedColor = "";
 
-    // Функція для генерації випадкового кольору
     function getRandomColor() {
         const letters = "0123456789ABCDEF";
         let color = "#";
@@ -27,20 +25,17 @@ document.addEventListener("DOMContentLoaded", function () {
         return color;
     }
 
-    // Функція для встановлення кольору на основі події
     function setColor(event) {
         const cell = event.target;
         if (event.type === "click") {
-            cell.style.backgroundColor = "red";
+            cell.style.backgroundColor = selectedColor || "red";
         } else if (event.type === "dblclick") {
-            // Зміна кольору діагоналі
             cells.forEach((cell, index) => {
                 if (index % 7 === 0) {
-                    cell.style.backgroundColor = "red";
+                    cell.style.backgroundColor = selectedColor || "red";
                 }
             });
         } else if (event.type === "mouseover" && cell === cells[2]) {
-            // Зміна кольору при наведенні тільки на клітинку 3
             cell.style.backgroundColor = getRandomColor();
         }
     }
@@ -49,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
     cells[2].addEventListener("dblclick", setColor);
     cells[2].addEventListener("mouseover", setColor);
 
-    // Палітра кольорів
     const colorBoxes = document.querySelectorAll(".color-box");
     colorBoxes.forEach((box) => {
         box.addEventListener("click", function () {
@@ -58,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Показ/приховування палітри при кліці на клітинку 3
     cells[2].addEventListener("click", function () {
         if (palette.style.display === "none") {
             palette.style.display = "block";
@@ -66,4 +59,12 @@ document.addEventListener("DOMContentLoaded", function () {
             palette.style.display = "none";
         }
     });
+
+    const colorInput = document.createElement("input");
+    colorInput.type = "color";
+    colorInput.addEventListener("input", function (event) {
+        selectedColor = event.target.value;
+    });
+
+    body.insertBefore(colorInput, table);
 });
