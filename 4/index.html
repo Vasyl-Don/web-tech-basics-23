@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Chat</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <ul id="messages"></ul>
+    <div id="form-container">
+        <div id="user-select">
+            <select id="username" onchange="changeUsername()">
+                <option value="Vlad" style="background-color: #e6f7ff;">Vlad</option>
+                <option value="Maksym" style="background-color: #ffe6e6;">Maksym</option>
+            </select>
+        </div>
+        <form id="form" action="">
+            <input id="m" autocomplete="off" />
+            <button>Send</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

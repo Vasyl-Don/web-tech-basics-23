@@ -1,0 +1,77 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+}
+
+#messages {
+    list-style-type: none;
+    padding: 0;
+    flex: 1;
+    overflow-y: auto;
+}
+
+#form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+#user-select {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+#user-select select {
+    color: #000;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#username {
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 120px;
+}
+
+#form {
+    display: flex;
+    flex: 1;
+}
+
+#form input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    flex: 1;
+    margin-right: 8px;
+}
+
+#form button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 80px;
+    background-color: #444;
+    color: #fff;
+}
+
+.message-container {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
